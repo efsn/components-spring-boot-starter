@@ -1,0 +1,3 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.hnair.components.cache.core.configuration.CacheAutoConfiguration,\
+com.hnair.components.cache.broadcast.RedisCacheChannel

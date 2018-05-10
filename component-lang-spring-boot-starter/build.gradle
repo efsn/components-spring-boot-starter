@@ -1,0 +1,10 @@
+dependencies {
+
+    version = "1.0-SNAPSHOT"
+
+    compile 'org.bouncycastle:bcprov-jdk15on:1.54'
+    compile lib.apache.commons.codec
+    compile lib.apache.commons.lang3
+
+    testCompile lib.spring.boot.starter.test
+}

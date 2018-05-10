@@ -1,0 +1,26 @@
+dependencies {
+
+    version = "1.0-SNAPSHOT"
+
+    compile lib.guava
+    compile lib.aspectj.aspectjrt
+    compile lib.aspectj.aspectjweaver
+    compile lib.jedis
+
+    /* serializer start */
+    compile(lib.serializer.fst) {
+        exclude group: 'org.javassist', module: 'javassist'
+    }
+    compile lib.serializer.kryo
+
+    /* serializer end */
+
+    compile lib.apache.commons.io
+    compile lib.apache.commons.codec
+    compile lib.apache.commons.lang3
+    compile lib.apache.commons.pool2
+
+    compile "net.sf.ehcache:ehcache-core:2.6.9"
+
+    testCompile lib.spring.boot.starter.test
+}

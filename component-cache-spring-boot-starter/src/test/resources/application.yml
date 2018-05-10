@@ -1,0 +1,30 @@
+# XCache configuration
+components:
+  cache:
+    serializer: java
+    broadcast: redis
+    provider:
+      - ehcache
+      - redis
+    regions:
+        default: initialCapacity=100,maximumSize=200,expireAfterWrite=1800s
+        global: initialCapacity=100,maximumSize=200
+    guava:
+        spec : initialCapacity=100,maximumSize=200,expireAfterWrite=1800s
+  # Redis config
+  redis: 
+    host: 10.142.16.186
+    port: 6379
+    passwd: 123456
+    timeout: 3600
+    dbIndex: 3
+    pool: 
+      maxTotal: 300
+      maxIdel: 100
+      maxWaitMillis: 1000
+    sentinel:
+      master: 
+      nodes: redis1.8l-air.com:26379,redis2.8l-air.com:26379,redis3.8l-air.com:26379
+
+
+
