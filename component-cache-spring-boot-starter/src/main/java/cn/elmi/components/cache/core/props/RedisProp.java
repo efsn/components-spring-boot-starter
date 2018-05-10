@@ -26,8 +26,8 @@ import lombok.Data;
  * @author Arthur
  * @since 1.0
  */
-@ConfigurationProperties("components.redis")
 @Data
+@ConfigurationProperties("components.redis")
 public class RedisProp {
 
     private String host;

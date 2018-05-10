@@ -9,7 +9,7 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
  * @author Arthur
  *
  */
-@SpringBootApplication(scanBasePackages = { "com.hnair.components" })
+@SpringBootApplication(scanBasePackages = { "cn.elmi.components" })
 @EnableAspectJAutoProxy(proxyTargetClass = true)
 public class Application {
 
