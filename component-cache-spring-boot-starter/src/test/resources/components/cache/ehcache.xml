@@ -39,7 +39,7 @@
 	<cache name="global"
 		maxElementsInMemory="0"
 		maxElementsOnDisk="0"
-		eternal="true"
+		eternal="false"
 		overflowToDisk="false"
 		timeToIdleSeconds="1800"
 	/>

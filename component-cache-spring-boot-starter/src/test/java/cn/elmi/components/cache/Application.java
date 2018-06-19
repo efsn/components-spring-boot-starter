@@ -5,11 +5,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
 /**
- * 
  * @author Arthur
- *
  */
-@SpringBootApplication(scanBasePackages = { "cn.elmi.components" })
+@SpringBootApplication(scanBasePackages = "cn.elmi")
 @EnableAspectJAutoProxy(proxyTargetClass = true)
 public class Application {
 

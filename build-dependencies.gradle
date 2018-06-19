@@ -1,46 +1,50 @@
 ext {
-    springVersion = "4.2.5.RELEASE"
+    // spring libs
+    springVersion = "5.0.7.RELEASE"
     springSessionVersion = "1.3.1.RELEASE"
 
-    groovyVersion = "3.0.0-alpha-1"
+    // google libs
     guavaVersion = "23.0"
     grpcVersion = "1.9.1"
-
-    etcd4jVersion = "2.16.0"
-
     protobufVersion = "3.5.1"
     protobufJavaFormatVersion = "1.4"
 
-    logbackVersion = "1.2.3"
+    // coreos libs
+    etcd4jVersion = "2.16.0"
 
-    nettyHandlerVersion = "4.1.17.Final"
-
-    validatorVersion = "5.4.1.Final"
-    testngVersion = "6.11"
-
-    servletVersion = "3.1.0"
-
-    slf4jVersion = "1.7.21"
-
-    lombokVersion = "1.16.16"
-
-    fastjsonVersion = "1.2.30"
-
-    influxdbVersion = "2.5"
-
-    jedisVersion = "2.9.0"
-
-    mysqlConnectorVersion = "5.1.34"
-
-    aspectjVersion = "1.9.1"
-
+    // apache libs
+    groovyVersion = "3.0.0-alpha-2"
     ioVersion = "2.6"
     codecVersion = "1.11"
     commonsLang3Version = "3.7"
     commonsPool2Version = "2.5.0"
 
+    // log libs
+    slf4jVersion = "1.7.21"
+    logbackVersion = "1.2.3"
+
+    // netty libs
+    nettyHandlerVersion = "4.1.17.Final"
+
+    // test libs
+    testngVersion = "6.11"
+
+    // nosql libs
+    jedisVersion = "2.9.0"
+
+    // database libs
+    mysqlConnectorVersion = "5.1.34"
+
+    // serialization libs
     fstVersion = "1.58"
     kryoVersion = "4.0.0"
+
+    fastjsonVersion = "1.2.30"
+    lombokVersion = "1.16.16"
+    validatorVersion = "5.4.1.Final"
+    servletVersion = "3.1.0"
+    influxdbVersion = "2.5"
+    aspectjVersion = "1.9.1"
 
     lib = [
             grpc      : [

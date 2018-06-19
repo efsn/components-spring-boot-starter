@@ -1,5 +1,10 @@
 # COMPONENTS-CACHE
-> 配置说明
+> base on caffeine & redis.
+> base on jdk 1.8
+
+functional caching
+
+
 
 JVM配置
 -Djava.net.preferIPv4Stack=true

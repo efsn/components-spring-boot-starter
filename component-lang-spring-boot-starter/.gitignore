@@ -6,6 +6,7 @@
 
 # IDEA
 /.idea/
+/out/
 /*.iml
 
 # Maven
@@ -13,7 +14,7 @@
 
 # Gradle
 /.gradle/
-/out/
+/build/
 
 # Others
 /logs/

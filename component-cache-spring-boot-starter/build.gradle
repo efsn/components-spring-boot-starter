@@ -21,6 +21,9 @@ dependencies {
     compile lib.apache.commons.pool2
 
     compile "net.sf.ehcache:ehcache-core:2.6.9"
+    compile "com.github.ben-manes.caffeine:caffeine:2.6.2"
+    compile 'com.github.ben-manes.caffeine:guava:2.6.2'
+    compile 'com.github.ben-manes.caffeine:jcache:2.6.2'
 
     testCompile lib.spring.boot.starter.test
 }
