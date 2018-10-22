@@ -26,6 +26,7 @@ import cn.elmi.components.cache.serializer.JavaSerializer;
 import cn.elmi.components.cache.serializer.Serializer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -74,6 +75,7 @@ public class CacheAutoConfiguration {
 
     @Bean(destroyMethod = "shutdown")
     @ConditionalOnMissingBean
+    @ConditionalOnProperty(prefix = "", value = "/components/cache/ehcache.xml", matchIfMissing = true)
     public CacheManager ehcacheManager() {
         // TODO
         String xml = "/components/cache/ehcache.xml";

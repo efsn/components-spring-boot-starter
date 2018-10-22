@@ -1,3 +1,4 @@
+# Initialize
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
 cn.elmi.components.cache.core.configuration.CacheAutoConfiguration,\
 cn.elmi.components.cache.broadcast.RedisCacheChannel

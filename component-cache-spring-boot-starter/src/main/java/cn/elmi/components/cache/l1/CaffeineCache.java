@@ -29,8 +29,8 @@ import cn.elmi.components.cache.Cache;
  * @author Arthur
  * @since 1.0
  */
-@Service("null")
-public class NullCache<K, V> implements Cache<K, V> {
+@Service("caffeine")
+public class CaffeineCache<K, V> implements Cache<K, V> {
 
     @Override
     public V getValue(K key) throws CacheException {

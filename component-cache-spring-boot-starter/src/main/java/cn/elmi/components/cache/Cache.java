@@ -28,43 +28,38 @@ public interface Cache<K, V> extends Closeable {
 
     /**
      * Get an item from the cache, nontransactionally
-     * 
-     * @param key
-     *            cache key
+     *
+     * @param key cache key
      * @return the cached object or null
      */
     public V getValue(K key);
 
     /**
      * Add an item to the cache, nontransactionally, with failfast semantics
-     * 
-     * @param key
-     *            cache key
-     * @param value
-     *            cache value
+     *
+     * @param key   cache key
+     * @param value cache value
      */
     public void put(K key, V value);
 
     /**
      * Cache item key set
-     * 
+     *
      * @return @
      */
     public Set<K> keys();
 
     /**
      * Evict the value of key in the cache
-     * 
-     * @param key
-     *            Cache key Remove an item from the cache
+     *
+     * @param key Cache key Remove an item from the cache
      */
     public void evict(K key);
 
     /**
      * Batch remove cache objects
-     * 
-     * @param keys
-     *            the cache keys to be evicted
+     *
+     * @param keys the cache keys to be evicted
      */
     public void evict(List<K> keys);
 

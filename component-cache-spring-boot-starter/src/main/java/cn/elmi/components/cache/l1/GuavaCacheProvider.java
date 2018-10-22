@@ -58,7 +58,7 @@ public class GuavaCacheProvider implements CacheProvider {
         return caches.containsKey(region) ? caches.get(region) : newCache(region);
     }
 
-    public <K, V> Cache<K, V> newCache(final String region) {
+    private <K, V> Cache<K, V> newCache(final String region) {
         String defaultRegion = "default";
         String regionConf = cacheProp.getRegions()
                 .get(cacheProp.getRegions().containsKey(region) ? region : defaultRegion);

@@ -20,6 +20,7 @@ package cn.elmi.components.cache;
  * @author Arthur
  * @since 1.0
  */
+@FunctionalInterface
 public interface CacheChain {
 
     /**

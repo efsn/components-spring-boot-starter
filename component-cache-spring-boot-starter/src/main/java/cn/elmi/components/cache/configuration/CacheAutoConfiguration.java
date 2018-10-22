@@ -14,32 +14,36 @@
  * TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package cn.elmi.components.cache;
+package cn.elmi.components.cache.configuration;
 
-import java.io.Closeable;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
+import org.springframework.context.annotation.Configuration;
 
 /**
  * @author Arthur
  * @since 1.0
  */
-public interface CacheProvider extends Closeable {
 
-    /**
-     * 缓存的标识名称
-     * 
-     * @return return cache provider name
-     */
-    String name();
 
-    /**
-     * Configure the cache
-     *
-     * @param region
-     *            the name of the cache region
-     * @return return cache instance
-     * @throws CacheException
-     *             cache exception
-     */
-    <K, V> Cache<K, V> provide(String region);
+@Configuration
+@EnableConfigurationProperties
+@ConditionalOnClass
+@ConditionalOnMissingBean()
+public class CacheAutoConfiguration {
+
+    private void fb1() {
+        System.out.println("ss");
+    }
+
+    private void fb23() {
+        System.out.println("ss");
+    }
+
+    private void fdas() {
+        System.out.println("ss");
+    }
+
 
 }

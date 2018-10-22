@@ -22,16 +22,16 @@ import org.springframework.stereotype.Component;
 
 /**
  * @author Arthur
- * @since 1.0
+ * @since 2.0
  */
-@Component("none")
-public class NullCacheProvider implements CacheProvider {
+@Component("caffeine")
+public class CaffeineCacheProvider implements CacheProvider {
 
-    private final static NullCache cache = new NullCache();
+    private final static CaffeineCache cache = new CaffeineCache();
 
     @Override
     public String name() {
-        return "none";
+        return "caffeine";
     }
 
     @Override

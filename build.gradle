@@ -26,7 +26,7 @@ apply from: "build-dependencies.gradle"
 subprojects {
 
     apply plugin: "java"
-    apply plugin: "maven"
+//    apply plugin: "maven"
     apply plugin: "idea"
     apply plugin: "org.springframework.boot"
     apply plugin: "io.spring.dependency-management"
@@ -40,7 +40,7 @@ subprojects {
     [compileJava, compileTestJava, javadoc]*.options*.encoding = "UTF-8"
 
     repositories {
-        mavenLocal()
+//        mavenLocal()
         mavenCentral()
     }
 
@@ -56,15 +56,16 @@ subprojects {
 
     dependencies {
         compile lib.spring.boot.starter.core,
-                lib.lombok,
                 lib.slf4j,
                 lib.logback.classic,
                 lib.logback.core
 
+        compile lib.lombok
+
         testCompile lib.testng
     }
 
-
+/*
     uploadArchives {
         repositories {
             mavenDeployer {
@@ -73,5 +74,5 @@ subprojects {
             }
         }
     }
-
+*/
 }
