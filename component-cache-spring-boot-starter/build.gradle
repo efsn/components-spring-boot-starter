@@ -22,5 +22,8 @@ dependencies {
 
     compile "net.sf.ehcache:ehcache-core:2.6.9"
 
+//    optional "org.springframework.boot:spring-boot-configuration-processor"
+
+
     testCompile lib.spring.boot.starter.test
 }

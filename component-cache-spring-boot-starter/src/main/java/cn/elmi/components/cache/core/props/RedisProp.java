@@ -16,11 +16,10 @@
 
 package cn.elmi.components.cache.core.props;
 
-import java.util.Set;
-
+import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
-import lombok.Data;
+import java.util.Set;
 
 /**
  * @author Arthur
@@ -58,7 +57,6 @@ public class RedisProp {
         return sentinel.nodes;
     }
 
-    @ConfigurationProperties("components.redis.pool")
     @Data
     public static class PoolProp {
         private int maxTotal;
@@ -66,7 +64,6 @@ public class RedisProp {
         private long maxWaitMillis;
     }
 
-    @ConfigurationProperties("components.redis.sentinel")
     @Data
     public static class SentinelProp {
         private String master;
