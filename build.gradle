@@ -8,7 +8,7 @@
 
 buildscript {
     ext {
-        springBootVersion = "1.5.9.RELEASE"
+        springBootVersion = "1.5.10.RELEASE"
     }
 
     repositories {
@@ -61,15 +61,20 @@ subprojects {
                 lib.logback.classic,
                 lib.logback.core
 
+        annotationProcessor("org.springframework.boot:spring-boot-configuration-processor")
+        annotationProcessor(lib.lombok)
+
         testCompile lib.testng
     }
+
+//    mvn deploy -Dregistry=https://maven.pkg.github.com/efsn -Dtoken=GH_TOKEN
 
 
     uploadArchives {
         repositories {
             mavenDeployer {
-                repository(url: "http://10.72.46.201:8080/content/repositories/snapshots/")
-                repository(url: "http://10.72.46.201:8080/content/repositories/releases/")
+                repository(url: "registry=https://maven.pkg.github.com/efsn")
+                repository(url: "registry=https://maven.pkg.github.com/efsn")
             }
         }
     }
